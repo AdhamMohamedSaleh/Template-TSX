@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Card, CardContent } from "@/components/ui/card"
+import { Card, CardContent, CardDescription } from "@/components/ui/card"
 import {
   Carousel,
   CarouselContent,
@@ -25,12 +25,12 @@ export default function HeroCarousel() {
         {products.map((p) => (
           <CarouselItem key={p._id} className="md:basis-1/2 lg:basis-1/3">
             <div className="p-1">
-              <Card className="shadow-md overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1">
+              <Card className="shadow-sm overflow-hidden transition transform hover:-translate-y-1">
                 <CardContent className="flex flex-col aspect-square items-center justify-center p-6">
                     <Image src={p.image} alt={p.name} width={150} height={150} className="object-cover rounded-md mb-4" />
-                    <h3 className="text-lg font-semibold">{p.name}</h3>
-                    <p className="text-sm text-gray-500">{p.category}</p>
-                    <p className="text-primary font-bold mt-2">{p.price}</p>
+                    <h3>{p.name}</h3>
+                    <CardDescription className="text-sm text-gray-500">{p.category}</CardDescription>
+                    <CardDescription className="text-primary font-bold mt-2">{p.price}</CardDescription>
                 </CardContent>
               </Card>
             </div>

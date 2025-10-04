@@ -30,10 +30,16 @@ export function HeroBanner() {
         {products.map((p) => (
           <CarouselItem key={p._id} className="basis-full">
             <div className="p-1">
-              <Card className="shadow-md rounded-lg relative border-gray-300">
-                <CardContent className="flex aspect-video max-h-[300px] md:max-h-[400px] lg:max-h-[500px] items-center justify-center p-6">
-                    <Image src={p.image} alt={p.name} width={500} height={500} priority className="transition-opacity duration-500 ease-in-out" />
-                    <p className="text-3xl font-bold text-white mb-2">{p.name}</p>
+              <Card className="overflow-hidden rounded-lg relative border-gray-300">
+                <CardContent className="grid grid-cols-2 aspect-video max-h-[300px] md:max-h-[400px] lg:max-h-[500px] items-center justify-center p-12">
+                    <div className="p-4 items-center justify-center inline-flex">
+                      <Image src={p.image} alt={p.name} width={500} height={500} priority className="transition-opacity duration-500 ease-in-out" />
+                    </div>
+                    <div className="p-4 space-y-2">
+                    <h2 className="">{p.name}</h2>
+                    <h3 className="">{p.category}</h3>
+                    <p className="font-bold">$ {p.price}</p>
+                    </div>
                 </CardContent>
               </Card>
             </div>

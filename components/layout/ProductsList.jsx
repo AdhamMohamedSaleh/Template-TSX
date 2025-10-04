@@ -2,18 +2,19 @@ import { products } from "@/MockData";
 import ProductCard from "./ProductCard";
 function ProductsList() {
   return (
-    <div>
-      <div>
-        <input type="text" placeholder="Search products..." />
-      </div>
+    <div className="flex flex-col max-w-7xl mx-auto p-4 space-y-10">
+      
 
-      <ul>
+
+
+      <ul className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
         {products.map((product, key) => (
           <li key={key}>
             <ProductCard product={product} />
             </li>
         ))}
       </ul>
+    
     </div>
   );
 };
