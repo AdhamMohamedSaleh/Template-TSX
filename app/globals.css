@@ -20,6 +20,7 @@
     @apply scroll-m-20 text-xl font-semibold tracking-tight
   }
 }
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);

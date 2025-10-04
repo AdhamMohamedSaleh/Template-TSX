@@ -27,7 +27,7 @@ async function Page() {
         </div>
       </section>
       <section id="featured" className="py-4 grid grid-rows-2">
-        <div className="space-y-8">
+        <div className="space-y-8 max-w-xl lg:max-w-7xl w-full mx-auto">
         <HeroBanner />
         <HeroCarousel />
         </div>

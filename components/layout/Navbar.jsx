@@ -13,7 +13,7 @@ function Navbar() {
         <Link href="/checkout" className="hover:text-blue-600">Checkout</Link>
         </div>
 
-        <div className="flex items-center space-x-4"></div>
+        <div className="flex items-center space-x-4">Sign Up</div>
         
       </div>
     </nav>
