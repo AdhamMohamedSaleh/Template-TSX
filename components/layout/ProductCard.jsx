@@ -1,10 +1,10 @@
-import * as React from "react";
 import Link from "next/link";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
+import Image from "../ThemeImage";
 
 export default function ProductCard({ product }) {
+
   return (
     <div className="max-w-7xl mx-auto p-4">
       <div >
@@ -26,7 +26,7 @@ export default function ProductCard({ product }) {
                     <p className="text-primary font-semibold mt-2">${product.price}</p>
                   </div>
                   <div>
-                    <Button className="w-full">View Details</Button>
+                    <Button className="w-full mt-auto">View Details</Button>
                   </div>
               </CardContent>
             </Card>

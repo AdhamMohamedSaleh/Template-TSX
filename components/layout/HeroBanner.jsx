@@ -2,17 +2,14 @@
 
 import * as React from "react"
 import Autoplay from "embla-carousel-autoplay"
-
 import { Card, CardContent, CardDescription } from "@/components/ui/card"
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
 } from "@/components/ui/carousel"
-import Image from "next/image"
 import {products} from "../../MockData"
+import Image from "../ThemeImage"
 
 export function HeroBanner() {
   const plugin = React.useRef(
@@ -33,7 +30,7 @@ export function HeroBanner() {
               <Card className="overflow-hidden rounded-lg relative border-gray-300">
                 <CardContent className="grid grid-cols-2 gap-12 aspect-video max-h-[300px] md:max-h-[300px] lg:max-h-[400px] items-center justify-center p-12">
                     <div className="px-8 items-center justify-center inline-flex">
-                      <Image src={p.image} alt={p.name} width={500} height={500} priority className="transition-opacity object-cover duration-500 ease-in-out" />
+                      <Image src={p.image} alt={p.name} width={350} height={350} priority className="transition-opacity object-cover duration-500 ease-in-out" />
                     </div>
                     <div className="p-8 md:space-y-2">
                     <h2 className="text-xl lg:text-3xl">{p.name}</h2>
@@ -46,8 +43,6 @@ export function HeroBanner() {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
     </Carousel>
   )
 }

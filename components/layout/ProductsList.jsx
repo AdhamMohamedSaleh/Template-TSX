@@ -1,6 +1,8 @@
 import { products } from "@/MockData";
 import ProductCard from "./ProductCard";
 function ProductsList() {
+
+  
   return (
     <div className="flex flex-col max-w-7xl mx-auto p-4 space-y-10">
       
