@@ -5,7 +5,7 @@ function Navbar() {
     <nav className="sticky top-0 bg-white z-50 shadow">
       <div className="container mx-auto flex items-center justify-between py-4 px-4">
         
-        <Link href="/" className="hover:text-blue-600">MySite</Link>
+        <Link href="/" className="hover:text-blue-600 font-black">MySite</Link>
 
         <div className="hidden md:flex space-x-6">
         <Link href="/" className="hover:text-blue-600">Home</Link>
@@ -13,7 +13,7 @@ function Navbar() {
         <Link href="/checkout" className="hover:text-blue-600">Checkout</Link>
         </div>
 
-        <div className="flex items-center space-x-4">Sign Up</div>
+        <div className="flex items-center space-x-4 font-bold">Sign Up</div>
         
       </div>
     </nav>
